@@ -1,10 +1,6 @@
 \# HW03a – GitHub API Commit Counter
 
-
-
 \## Description
-
-
 
 This program takes a GitHub user ID as input and retrieves:
 
@@ -12,43 +8,23 @@ This program takes a GitHub user ID as input and retrieves:
 
 \- The number of commits in each repository
 
-
-
 It uses the public GitHub REST API.
-
-
 
 \## Installation
 
-
-
 pip install -r requirements.txt
-
-
 
 \## Run the Program
 
-
-
 python main.py
-
-
 
 \## Run Unit Tests
 
-
-
 python -m unittest -v
-
-
 
 \## Testing Strategy
 
-
-
 The GitHubClient class was designed for testability.
-
-
 
 \- The HTTP session is injected so it can be mocked.
 
@@ -59,6 +35,11 @@ The GitHubClient class was designed for testability.
 \- Error handling (404, 403 rate limit) is verified.
 
 \- Pagination is handled and tested.
+
+## HW03a_Mocking (Part B)
+
+In this branch, the unit tests mock all GitHub API HTTP calls using `unittest.mock.patch`
+so that tests do not depend on GitHub availability, repository changes, or API rate limits.
 
 
 
